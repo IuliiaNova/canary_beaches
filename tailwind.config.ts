@@ -2,9 +2,7 @@ import type { Config } from 'tailwindcss'
 
 const config: Config = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -13,7 +11,19 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {
+        customDarkGray: '#4f4f40',
+        customLightray: '#DFDCD4',
+        customDarkGreen: '#0B201F',
+        customOrange: '#D66533',
+        customLightBlue: '#B5CACC',
+        customGrayBlue: '#9BABAD',
+        customBeige: '#B28C70',
+        customTerracotta: '#BA6842'
+
+      }
     },
+
   },
   plugins: [],
 }
