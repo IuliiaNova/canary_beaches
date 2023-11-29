@@ -1,40 +1,71 @@
+import { MdOutlineBeachAccess } from "react-icons/md"
+import { DropdownButtonMenu } from "./DropdownButtonMenu"
 
 export const Navbar = () => {
 
+  const dropDownContentMunicipalities = [
+    {
+      name: 'Las Palmas',
+      number_beaches: 4
+    },
+    {
+      name: 'Arucas',
+      number_beaches: 2
+    },
+    {
+      name: 'Telde',
+      number_beaches: 3
+    },
+    {
+      name: 'Agaete',
+      number_beaches: 3
+    },
+    {
+      name: 'Maspalomas',
+      number_beaches: 4
+    }
+  ]
+
+  const dropDownContentCaracteristicas = [
+    {
+      name: 'Assesible',
+      number_beaches: 4
+    },
+    {
+      name: 'Bandera azul',
+      number_beaches: 2
+    },
+    {
+      name: 'Nudista',
+      number_beaches: 3
+    },
+    {
+      name: 'Paseo maritima',
+      number_beaches: 5
+    }
+  ]
+
   return (
 
-    <nav className="bg-customOrange border-gray-200 dark:bg-gray-900">
+    <nav className=" border-gray-200 dark:bg-gray-900">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="https://flowbite.com/" className="flex items-center">
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+        <a href="/" className="flex gap-2 items-center">
+          <span><MdOutlineBeachAccess fill={'white'} size={30} /></span>
+          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Playas canarias</span>
         </a>
-        <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-          <span className="sr-only">Open main menu</span>
-          <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
-          </svg>
-        </button>
-        <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-            <li>
-              <a href="#" className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
-            </li>
-            <li>
-              <a href="#" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
-            </li>
-            <li>
-              <a href="#" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
-            </li>
-            <li>
-              <a href="#" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
-            </li>
-            <li>
-              <a href="#" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-            </li>
-          </ul>
-        </div>
+        <ul className="font-medium flex flex-col gap-16 items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <DropdownButtonMenu btmLabel={'Municipios'} dropDownContent={dropDownContentMunicipalities}/>
+          </li>
+          <li>
+            <DropdownButtonMenu btmLabel={'Caracteristicas'} dropDownContent={dropDownContentCaracteristicas}/>
+          </li>
+          <li>
+            <a href="#"
+              className=" py-2 pl-3 pr-4 text-gray-900 text-lg rounded  md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Todos las plays</a>
+          </li>
+        </ul>
       </div>
     </nav>
-
   )
 }
