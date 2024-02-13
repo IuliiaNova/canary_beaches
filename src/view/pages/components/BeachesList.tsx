@@ -1,4 +1,4 @@
-import { BeachItem } from "../ui/BeachItem"
+import { BeachItem } from "./BeachItem"
 
 export const BeachesList = () => {
   return (

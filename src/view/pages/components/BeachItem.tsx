@@ -19,12 +19,14 @@ export const BeachItem = () => {
   }, [])
 
 
+  
 
 
   return (
+
     <div>
       <div>
-        {/* <Image alt="playa foto" src={''} /> */}
+        {/* // TODO: add picture property <Image alt="playa foto" src={''} /> */}
         <div>
           <span>Icon</span>
           <span>Temperatura</span>

@@ -1,4 +1,4 @@
-import { Header } from '@/components/core/Header'
+import { Header } from '@/view/ui/Header'
 import type { Metadata } from 'next'
 import '../style/global.css'
 

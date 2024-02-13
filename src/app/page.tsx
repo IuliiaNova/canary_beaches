@@ -1,4 +1,4 @@
-import { BeachesList } from '@/components/core/BeachesList'
+import { BeachesList } from '@/view/pages/components/BeachesList'
 
 export default function Home() {
   return (
