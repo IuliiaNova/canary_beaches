@@ -3,42 +3,32 @@
 import Image from "next/image"
 import { getAllBeaches } from "@/api/beaches"
 import { useEffect, useState } from "react"
+import { ElaboradoData } from "@/models/beaches/beach.interface"
 
-export const BeachItem = () => {
+export const BeachItem = ({data}: {data: ElaboradoData }) => {
 
-  const [test, setTest] = useState()
-  console.log('test', test);
-
-
-  useEffect(() => {
-    const text = async () => {
-      const test = await getAllBeaches()
-      setTest(test)
-    }
-    text()
-  }, [])
-
-
+  console.log(data);
   
-
 
   return (
 
-    <div>
+    <div className="bg-red-200">
+      <div className="flex gap-2">
+        <span className="font-semibold ">Playa name</span>
+        <span className="">{data?.fecha?.nombre}</span>
+      </div>
+        
       <div>
-        {/* // TODO: add picture property <Image alt="playa foto" src={''} /> */}
         <div>
-          <span>Icon</span>
-          <span>Temperatura</span>
+          <span>Cielo</span>
+          <span>{data?.fecha?.prediccion?.dia[0].estadoCielo?.descripcion1}</span>
         </div>
         <div>
           <span>Icon</span>
           <span>Viento</span>
         </div>
-
       </div>
       <div>
-        <span className="font-semibold">Playa name</span>
         <span>Playa municipio</span>
       </div>
     </div>
