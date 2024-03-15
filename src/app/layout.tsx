@@ -1,6 +1,7 @@
 import { Header } from '@/view/ui/Header'
 import type { Metadata } from 'next'
 import '../style/global.css'
+import FontImport from '@/view/head/Head'
 
 export const metadata: Metadata = {
   title: 'Canary beaches',
@@ -14,6 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <FontImport />
       <body  className="">
         <Header />
         {children}

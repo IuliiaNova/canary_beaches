@@ -1,9 +1,9 @@
-import { BeachesList } from '@/view/pages/components/BeachesList'
+import { BeachesPage } from '@/view/pages/Beaches.page'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-gray-100">
-      <BeachesList />
+    <main className="m-auto mt-16 w-[90%]">
+      <BeachesPage />
     </main>
   )
 }
