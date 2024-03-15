@@ -15,12 +15,20 @@ const config: Config = {
         customDarkGray: '#4f4f40',
         customLightray: '#DFDCD4',
         customDarkGreen: '#0B201F',
-        customOrange: '#D66533',
         customLightBlue: '#B5CACC',
         customGrayBlue: '#9BABAD',
         customBeige: '#B28C70',
-        customTerracotta: '#BA6842'
+        customTerracotta: '#BA6842',
+        
+        customBlueGreen: '#7dcfb6',
+        customBlue: '#00b2ca',
+        customDarkBlue: '#1d4e89',
+        customOrange: '#fb8500',
+        customLightOrange: '#fbd1a2',
 
+      },
+      fontFamily: {
+        customMadimi: 'Madimi One'
       }
     },
 
