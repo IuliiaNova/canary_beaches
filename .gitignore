@@ -35,3 +35,5 @@ next-env.d.ts
 
 .env
 src/api/beaches.ts
+
+src/api/data
